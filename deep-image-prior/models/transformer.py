@@ -55,11 +55,11 @@ class TransformerWithCNN(VisionTransformer):
         self.upsample = torch.nn.Linear(self.hidden_dim, self.c*self.patch_size*self.patch_size)
         mag, self.sgn = abs(cnn_num), np.sign(cnn_num)
         self.conv = torch.nn.Sequential(
-                        (*([torch.nn.Conv2d(3, 3, 3, padding='same', padding_mode='reflect'),
-                        torch.nn.ReLU()]*mag)[:-1])
+                        *(([torch.nn.Conv2d(3, 3, 3, padding='same', padding_mode='reflect'),
+                        torch.nn.ReLU()]*(mag-1))[:-1]),
 #                         torch.nn.Conv2d(3, 3, 3, padding='same', padding_mode='reflect'),
 #                         torch.nn.ReLU(),
-#                         torch.nn.Conv2d(3, 3, 3, padding='same', padding_mode='reflect'),
+                        torch.nn.Conv2d(3, 3, 3, padding='same', padding_mode='reflect')
                     )
         
     def forward(self, x: torch.Tensor, output='imgs'):

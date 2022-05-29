@@ -25,15 +25,15 @@ import os
 #     for num_channels in [8, 10, 12, 16]:
 #         os.system(f'python image_prior.py inpaint resnet --num_layers {num_layers} --num_channels {num_channels}  --image_path data/inpainting/kate.png --mask_path data/inpainting/kate_mask.png --iters 7000')
 
-os.system(f'python image_prior.py denoise orig --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
+# os.system(f'python image_prior.py denoise orig --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
 
-os.system(f'python image_prior.py denoise transformer --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
+# os.system(f'python image_prior.py denoise transformer --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
 
-os.system(f'python image_prior.py denoise swin_transformer --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
+# os.system(f'python image_prior.py denoise swin_transformer --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
 
 os.system(f'python image_prior.py denoise transformercnn3 --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
 
-os.system(f'python image_prior.py denoise transformercnn3before --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
+# os.system(f'python image_prior.py denoise transformercnn3before --num_layers 5 --num_heads 8 --emb_dim 192 --patch_size 32  --image_path data/denoising/F16_GT.png --iters 5000')
 
 
 # os.system(f'python image_prior.py inpaint orig --image_path data/inpainting/kate.png --mask_path data/inpainting/kate_mask.png --iters 7000')
